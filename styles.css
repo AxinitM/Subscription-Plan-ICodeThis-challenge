@@ -1,0 +1,231 @@
+/* General settings */
+:root {
+    /* Colors */
+    --bgColor: #e6e6fa;
+    --bgContainerColor: #fff;
+    --bgCheckboxColor: #fff;
+    --bgButtonColor: #171754;
+    --textColor: #171754;
+    --textCheckboxColor: #fff;
+    --borderColor: #a8a8a8;
+    --modalBgColor: rgba(0, 0, 0, 0.5);
+    --modalContentBg: #fff;
+
+    /* Fonts */
+    --mainFamilyFont: "Poppins", sans-serif;
+  }
+
+  /* Reset settings */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--mainFamilyFont, sans-serif);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Body settings */
+  body {
+    background-color: var(--bgColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  /* Container settings */
+  #container {
+    background-color: var(--bgContainerColor);
+    color: var(--textColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 380px;
+    max-width: 80%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Header settings */
+  #header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid var(--borderColor);
+    border-radius: 50%;
+    padding: 20px;
+    margin-top: 40px;
+  }
+
+  #header i {
+    color: var(--textColor);
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  header h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 5px;
+  }
+
+  /* Price section settings */
+  #price-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 25px 0 40px 0;
+  }
+
+  #price {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  #price-month {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  /* Download paragraph settings */
+  #download-par {
+    margin: 10px 0 45px 0;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  /* Radio input settings */
+  button,
+  input,
+  label {
+    outline: none;
+    -webkit-appearance: none;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  label {
+    cursor: pointer;
+    padding: 6px 12px;
+    background-color: var(--bgCheckboxColor);
+    border: 1px solid var(--borderColor);
+    border-radius: 8px;
+    transition: background-color 0.2s linear;
+    margin: 0 4px;
+  }
+
+  input[type="radio"]:checked + label {
+    background-color: var(--bgButtonColor);
+    color: var(--textCheckboxColor);
+    border: 1px solid var(--bgButtonColor);
+  }
+
+  /* Submit button settings / footer section */
+  #submit-btn {
+    background-color: var(--bgButtonColor);
+    color: var(--textCheckboxColor);
+    box-shadow: 0 3px 10px rgba(27, 37, 90, 0.5);
+    padding: 15px;
+    margin-bottom: 50px;
+    width: 250px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.1s ease;
+  }
+
+  #submit-btn:hover {
+    background-color: #2a2a8a;
+    box-shadow: 0 4px 12px rgba(27, 37, 90, 0.6);
+  }
+
+  #submit-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 5px rgba(27, 37, 90, 0.3);
+  }
+
+  /* Modal window settings */
+  #modal-window {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modalBgColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  #modal-window.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .modal-content {
+    background-color: var(--modalContentBg);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 90%;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-50px);
+    transition: transform 0.3s ease;
+  }
+
+  #modal-window.active .modal-content {
+    transform: translateY(0);
+  }
+
+  .modal-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: var(--textColor);
+  }
+
+  /* Close button in modal */
+  .modal-close-btn {
+    background-color: transparent;
+    border: 1px solid var(--bgButtonColor); 
+    color: var(--bgButtonColor); 
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-family: var(--mainFamilyFont);
+    transition: all 0.2s ease;
+  }
+
+  .modal-close-btn:hover {
+    background-color: #2a2a8a; 
+    color: #fff;
+    border-color: #2a2a8a;
+  }
+
+  /* Media queries */
+  @media (max-width: 600px) {
+    #submit-btn {
+      width: 100%;
+      padding: 18px;
+      font-size: 1rem;
+    }
+
+    .modal-content {
+      width: 80%;
+    }
+  }

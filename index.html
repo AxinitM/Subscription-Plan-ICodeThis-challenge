@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+    />
+    <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="images/favicon-32x32.png"
+  />
+    <title>Subscription Plan /ICodeThis challenge</title>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="container">
+      <header id="header">
+        <i class="fa-solid fa-mountain-sun"></i>
+        <h2>basic</h2>
+      </header>
+      <main>
+        <section id="price-container">
+          <p id="price">10</p>
+          <p id="price-month">USD / month</p>
+        </section>
+        <section>
+          <input id="check-10" type="radio" value="10" name="checks" checked />
+          <label for="check-10">10</label>
+          <input id="check-25" type="radio" value="25" name="checks" />
+          <label for="check-25">25</label>
+          <input id="check-50" type="radio" value="50" name="checks" />
+          <label for="check-50">50</label>
+          <input id="check-99" type="radio" value="99" name="checks" />
+          <label for="check-99">99</label>
+        </section>
+        <section>
+          <p id="download-par">Downloads per month</p>
+        </section>
+        <section id="modal-window">
+          <div class="modal-content">
+            <p id="modal-message"></p>
+            <button class="modal-close-btn" id="modal-close">Close</button>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <button id="submit-btn">Subscribe</button>
+      </footer>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
