@@ -3,14 +3,12 @@
 This is a solution to a challenge "Subscription Plan" from the website [ICodeThis](https://icodethis.com/modes/design-to-code/182/submissions?page=1).
 
 ## Table of contents
-- [Subscription Plan /ICodeThis challenge](#subscription-plan-icodethis-challenge)
-  - [Table of contents](#table-of-contents)
-  - [Task](#task)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-  - [How it works](#how-it-works)
-  - [Built with](#built-with)
-  - [Author](#author)
+- [Task](#task)
+- [Screenshot](#screenshot)
+- [Links](#links)
+- [How it works](#how-it-works)
+- [Built with](#built-with)
+- [Author](#author)
 
 ## Task
 
@@ -25,7 +23,7 @@ Prioritize creativity over pixel-perfect accuracy and showcase your developer in
 
 ## Links
 
-[Background Changer Page](https://your-solution-url.com)
+[Subscription Plan Page](https://axinitm.github.io/Subscription-Plan-ICodeThis-challenge/)
 
 ## How it works
 
